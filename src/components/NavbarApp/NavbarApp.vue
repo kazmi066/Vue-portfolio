@@ -1,70 +1,77 @@
 <script>
 import { ref } from 'vue';
-import ToggleIcon from '@/assets/icons/toggleIcon.svg?inline';
+import ContainerLayout from '@/components/ContainerLayout.vue';
+import { useRoute } from 'vue-router';
 
-    export default {
-        components: {ToggleIcon},
+export default {
+    components: {ContainerLayout},
+    setup() {
+        const section = ref('');
+        const openHeader = ref(false);
+        const location = useRoute();
 
-        setup() {
-            const section = ref('');
-            const openHeader = ref(false);
-            
-            const showHeader = () => {
-                if (openHeader.value) openHeader.value = false
-                else if (!openHeader.value) openHeader.value = true
-            }
+        const toggleHeader = () => {
+            if (openHeader.value) openHeader.value = false
+            else if (!openHeader.value) openHeader.value = true
+        }
 
-            return {
-                section,
-                openHeader,
-                showHeader,
-            }
+        return {
+            section,
+            openHeader,
+            toggleHeader,
+            currentPath: location.params.id
         }
     }
+}
 </script>
 <template>
     <nav class="navContainer">
-        <div class="contentContainer">
-            <h2>Olivia <span class="text-color-primary">Queen</span></h2>
-            <ul class="links" :class="openHeader ? 'right-0' : '-right-[100%] lg:right-0'">
-                <li class="linkWrapper">
-                    <a @click="showHeader()" href="home" class="link"
-                        :class="section === 'home' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                        home
-                    </a>
-                </li>
-                <li class="linkWrapper">
-                    <a @click="showHeader()" href="about" class="link"
-                        :class="section === 'about' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                        about
-                    </a>
-                </li>
-                <li class="linkWrapper">
-                    <a @click="showHeader()" href="services" class="link"
-                        :class="section === 'services' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                        services
-                    </a>
-                </li>
-                <li class="linkWrapper">
-                    <a @click="showHeader()" href="projects" class="link"
-                        :class="section === 'projects' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                        projects
-                    </a>
-                </li>
-                <li class="linkWrapper">
-                    <a @click="showHeader()" href="contact" class="link"
-                        :class="section === 'contact' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                        contact
-                    </a>
-                </li>
-                <div @click="showHeader()" class="flex lg:hidden text-white absolute top-5 right-5 cursor pointer">
-                    <IconX :size="30" />
+        <ContainerLayout>
+            <div class="contentContainer">
+                <h2>Olivia <span class="text-color-primary">Queen{{console.log(currentPath)}}</span></h2>
+                <ul class="links" :class="openHeader ? 'open' : undefined">
+                    <li class="linkWrapper">
+                        <a @click="toggleHeader()" href="home" class="link"
+                            :class="section === 'home' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                            home
+                        </a>
+                    </li>
+                    <li class="linkWrapper">
+                        <a @click="toggleHeader()" href="about" class="link"
+                            :class="section === 'about' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                            about
+                        </a>
+                    </li>
+                    <li class="linkWrapper">
+                        <a @click="toggleHeader()" href="services" class="link"
+                            :class="section === 'services' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                            services
+                        </a>
+                    </li>
+                    <li class="linkWrapper">
+                        <a @click="toggleHeader()" href="projects" class="link"
+                            :class="section === 'projects' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                            projects
+                        </a>
+                    </li>
+                    <li class="linkWrapper">
+                        <a @click="toggleHeader()" href="contact" class="link"
+                            :class="section === 'contact' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                            contact
+                        </a>
+                    </li>
+                    <div @click="toggleHeader()" class="flex lg:hidden text-white absolute top-5 right-5 cursor pointer">
+                        <IconX :size="30" />
+                    </div>
+                    <div @click="toggleHeader()" class="cancelIcon">
+                        <img svg-inline src="../../assets/icons/crossIcon.svg" alt="Cancel" />
+                    </div>
+                </ul>
+                <div @click="toggleHeader()" class="toggleIcon">
+                    <img svg-inline src="../../assets/icons/toggleIcon.svg" alt="Toggle" />
                 </div>
-            </ul>
-            <div @click="showHeader()" class="toggleIcon">
-                <ToggleIcon />
             </div>
-        </div>
+        </ContainerLayout>
     </nav>
 </template>
 <style scoped src="./styles.css">

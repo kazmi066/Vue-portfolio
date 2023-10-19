@@ -1,20 +1,28 @@
 <script>
-  import NavbarApp from './components/NavbarApp/NavbarApp.vue';
-  import HelloWorld from './components/HelloWorld.vue'
+import NavbarApp from '@/components/NavbarApp/NavbarApp.vue';
+import { useRouter } from 'vue-router';
 
-  export default {
-    name: 'App',
-    components: {
-      HelloWorld,
-      NavbarApp
-    }
+export default {
+  components: { NavbarApp },
+  setup() {
+    const router = useRouter()
+
+    return { router }
   }
+}
 </script>
-
 <template>
   <main>
     <NavbarApp />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="routesContainer">
+      <router-view />
+    </div>
   </main>
 </template>
+
+<style>
+  .routesContainer {
+    padding-top: 16vh;
+  }
+</style>
 
