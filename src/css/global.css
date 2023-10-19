@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darker-blue: #0a1a2b;
+  --lighter-blue: #0f1f31;
+  --muted: rgba(255,255,255,.5);
+}
+
+body, html {
+  background-color: var(--darker-blue);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
