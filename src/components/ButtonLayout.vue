@@ -17,10 +17,10 @@ export default {
 
 <style>
   .buttonContainer {
-    padding: 0.2rem 1rem;
+    padding: 0;
     outline: none;
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: 50px;
     cursor: pointer;
     color: var(--darker-blue);
     transition: background-color .2s ease-out;
