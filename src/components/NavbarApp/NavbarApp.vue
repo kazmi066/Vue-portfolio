@@ -31,34 +31,39 @@ export default {
                 <h2>Olivia <span class="text-color-primary">Queen{{console.log(currentPath)}}</span></h2>
                 <ul class="links" :class="openHeader ? 'open' : undefined">
                     <li class="linkWrapper">
-                        <a @click="toggleHeader()" href="home" class="link"
-                            :class="section === 'home' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                            home
-                        </a>
+                        <router-link to="/" class="link">
+                            <div :class="section === 'home' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                                home
+                            </div>
+                        </router-link>
                     </li>
                     <li class="linkWrapper">
-                        <a @click="toggleHeader()" href="about" class="link"
-                            :class="section === 'about' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                            about
-                        </a>
+                        <router-link to="/about" class="link">
+                            <div :class="section === 'about' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                                about
+                            </div>
+                        </router-link>
                     </li>
                     <li class="linkWrapper">
-                        <a @click="toggleHeader()" href="services" class="link"
-                            :class="section === 'services' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                            services
-                        </a>
+                        <router-link to="/services" class="link">
+                            <div :class="section === 'services' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                                services
+                            </div>
+                        </router-link>
                     </li>
                     <li class="linkWrapper">
-                        <a @click="toggleHeader()" href="projects" class="link"
-                            :class="section === 'projects' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                            projects
-                        </a>
+                        <router-link to="/projects" class="link">
+                            <div :class="section === 'projects' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                                projects
+                            </div>
+                        </router-link>
                     </li>
                     <li class="linkWrapper">
-                        <a @click="toggleHeader()" href="contact" class="link"
-                            :class="section === 'contact' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                            contact
-                        </a>
+                        <router-link to="/contact" class="link">
+                            <div :class="section === 'contact' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                                contact
+                            </div>
+                        </router-link>
                     </li>
                     <div @click="toggleHeader()" class="flex lg:hidden text-white absolute top-5 right-5 cursor pointer">
                         <IconX :size="30" />
