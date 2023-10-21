@@ -1,7 +1,11 @@
+.mainContainer {
+  padding: 6rem 0;
+}
+
 .hobbiesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1rem;
+  gap: 4rem 1rem;
   padding-top: 1rem;
 }
 
@@ -11,9 +15,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-}
-.mainContainer {
-  padding: 6rem 0;
 }
 
 .hobbieTitle {
@@ -35,5 +36,6 @@
 
 .hobbieImage img {
   width: 100%;
+  min-height: 250px;
   aspect-ratio: 4/3;
 }
