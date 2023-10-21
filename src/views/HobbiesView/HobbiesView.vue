@@ -58,6 +58,7 @@ export default {
     <ContainerLayout>
       <section class="mainContainer">
         <SectionTitle>My Hobbies and Interests &#128526;</SectionTitle>
+        <p style="margin-bottom: 1rem; margin-top: -0.5rem;">You can talk to me on these topics all day.</p>
         <div class="hobbiesGrid">
           <div v-for="hobbie in hobbies" :key="hobbie.name" class="hobbie">
             <div class="hobbieImage">
