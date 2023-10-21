@@ -17,4 +17,3 @@ export default {
     <CtaSection />
     <FooterApp />
 </template>
-<style scoped src="./styles.css"></style>
