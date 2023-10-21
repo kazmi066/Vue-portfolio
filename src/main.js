@@ -15,7 +15,12 @@ const router = createRouter({
       path: '/biography',
       name: 'Biography',
       component: () => import('./views/BiographyView/BiographyView.vue')
-    }
+    },
+    {
+      path: '/hobbies',
+      name: 'Hobbies',
+      component: () => import('./views/HobbiesView/HobbiesView.vue')
+    },
   ]
 })
 

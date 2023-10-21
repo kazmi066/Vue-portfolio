@@ -15,8 +15,6 @@ export default {
             else if (!openHeader.value) openHeader.value = true
         }
 
-        console.log(location.path);
-
         return {
             section,
             openHeader,
@@ -47,9 +45,9 @@ export default {
                         </router-link>
                     </li>
                     <li class="linkWrapper">
-                        <router-link to="/services" class="link">
-                            <div :class="section === '/services' ? 'active' : 'text-white hover:text-[#00AEFF]'">
-                                services
+                        <router-link to="/hobbies" class="link">
+                            <div :class="section === '/hobbies' ? 'active' : 'text-white hover:text-[#00AEFF]'">
+                                hobbies
                             </div>
                         </router-link>
                     </li>
