@@ -4,22 +4,6 @@
   gap: 2rem;
 }
 
-.sectionTitle {
-  margin-bottom: 4rem;
-  display: inline-block;
-  position: relative;
-}
-
-.sectionTitle::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 30%;
-  height: 4px;
-  background-color: #fff;
-}
-
 .quality {
   display: flex;
   flex-direction: column;

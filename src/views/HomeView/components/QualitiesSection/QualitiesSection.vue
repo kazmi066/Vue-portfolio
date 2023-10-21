@@ -1,6 +1,13 @@
+<script>
+import SectionTitle from '@/components/SectionTitle.vue';
+
+export default {
+  components: { SectionTitle }
+}
+</script>
 <template>
   <section class="qualitiesContainer">
-    <h2 class="sectionTitle">Some of my qualities</h2>
+    <SectionTitle>Some of my qualities</SectionTitle>
     <div class="qualities">
       <div class="quality">
         <h3 class="title">Adaptability</h3>
