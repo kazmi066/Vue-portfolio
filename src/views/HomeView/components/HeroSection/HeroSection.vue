@@ -7,8 +7,8 @@ export default {
 </script>
 
 <template>
-  <div class="heroContainer">
-    <section class="leftColumnContent">
+  <section class="heroContainer">
+    <div class="leftColumnContent">
       <h1 class="personName">Hey there, I'm Olivia-<br/>Frontend Developer & Nature Lover</h1>
       <p class="personDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id inventore
         tenetur blanditiis praesentium, laborum distinctio modi hic odit nemo,
@@ -22,7 +22,7 @@ export default {
           </div>
         </ButtonLayout>
       </router-link>
-    </section>
+    </div>
     <div class="rightColumnContent">
       <img
         class="personImage"
@@ -30,6 +30,6 @@ export default {
         alt="Person Pic"
       />
     </div>
-  </div>
+  </section>
 </template>
 <style scoped src="./styles.css"></style>

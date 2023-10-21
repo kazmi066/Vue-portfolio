@@ -40,6 +40,11 @@
   position: relative;
 }
 
+.router-link-active {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .link:hover {
   color: #fff;
 }

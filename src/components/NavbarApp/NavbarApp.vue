@@ -15,11 +15,13 @@ export default {
             else if (!openHeader.value) openHeader.value = true
         }
 
+        console.log(location.path);
+
         return {
             section,
             openHeader,
             toggleHeader,
-            currentPath: location.params.id
+            currentPath: location.path
         }
     }
 }
@@ -28,39 +30,39 @@ export default {
     <nav class="navContainer">
         <ContainerLayout>
             <div class="contentContainer">
-                <h2>Olivia <span class="text-color-primary">Queen{{console.log(currentPath)}}</span></h2>
+                <h2>Olivia <span class="text-color-primary">Queen</span></h2>
                 <ul class="links" :class="openHeader ? 'open' : undefined">
                     <li class="linkWrapper">
                         <router-link to="/" class="link">
-                            <div :class="section === 'home' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                            <div :class="section === '/' ? 'active' : 'text-white hover:text-[#00AEFF]'">
                                 home
                             </div>
                         </router-link>
                     </li>
                     <li class="linkWrapper">
-                        <router-link to="/about" class="link">
-                            <div :class="section === 'about' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
-                                about
+                        <router-link to="/biography" class="link">
+                            <div :class="section === '/biography' ? 'active' : 'text-white hover:text-[#00AEFF]'">
+                                biography
                             </div>
                         </router-link>
                     </li>
                     <li class="linkWrapper">
                         <router-link to="/services" class="link">
-                            <div :class="section === 'services' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                            <div :class="section === '/services' ? 'active' : 'text-white hover:text-[#00AEFF]'">
                                 services
                             </div>
                         </router-link>
                     </li>
                     <li class="linkWrapper">
                         <router-link to="/projects" class="link">
-                            <div :class="section === 'projects' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                            <div :class="section === '/projects' ? 'active' : 'text-white hover:text-[#00AEFF]'">
                                 projects
                             </div>
                         </router-link>
                     </li>
                     <li class="linkWrapper">
                         <router-link to="/contact" class="link">
-                            <div :class="section === 'contact' ? 'text-[#00AEFF] hover:text-white' : 'text-white hover:text-[#00AEFF]'">
+                            <div :class="section === '/contact' ? 'active' : 'text-white hover:text-[#00AEFF]'">
                                 contact
                             </div>
                         </router-link>

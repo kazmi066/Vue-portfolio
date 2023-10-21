@@ -1,0 +1,49 @@
+.sectionContent {
+  padding: 4rem 0;
+}
+
+.aboutSection {
+  width: 60%;
+}
+
+.personDescription {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.careerSection,
+.educationSection {
+  padding-bottom: 4rem;
+}
+
+.skillsSection {
+  background-color: var(--lighter-blue);
+  padding: 2rem;
+}
+
+.skillTitle {
+  padding-top: 1rem;
+  padding-bottom: .4rem;
+}
+
+.skillsSection li {
+  color: var(--muted);
+  padding: 0.4rem 0;
+}
+
+@media (max-width: 992px) {
+  .personDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainContainer {
+    padding: 3rem 0;
+  }
+}

@@ -6,7 +6,7 @@
 
 <style>
 .sectionTitle {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   display: inline-block;
   position: relative;
 }

@@ -1,9 +1,10 @@
 <script>
 import NavbarApp from '@/components/NavbarApp/NavbarApp.vue';
 import { useRouter } from 'vue-router';
+import FooterApp from './components/FooterApp.vue';
 
 export default {
-  components: { NavbarApp },
+  components: { NavbarApp, FooterApp },
   setup() {
     const router = useRouter()
 
@@ -17,6 +18,7 @@ export default {
     <div class="routesContainer">
       <router-view />
     </div>
+    <FooterApp />
   </main>
 </template>
 
