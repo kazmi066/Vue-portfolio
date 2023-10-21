@@ -1,0 +1,25 @@
+.mainContainer {
+  padding: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.careerSection,
+.educationSection {
+  padding-bottom: 4rem;
+}
+
+.skillsSection {
+  background-color: var(--lighter-blue);
+  padding: 2rem;
+}
+
+.skillTitle {
+  padding-top: 1rem;
+  padding-bottom: .4rem;
+}
+
+.skillsSection li {
+  color: var(--muted);
+  padding: 0.4rem 0;
+}
