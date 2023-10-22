@@ -62,7 +62,7 @@ export default {
         <div class="hobbiesGrid">
           <div v-for="hobbie in hobbies" :key="hobbie.name" class="hobbie">
             <div class="hobbieImage">
-              <img :src="hobbie.icon" alt="Hobbie" />
+              <img :src="hobbie.icon" alt="Hobbie" loading="lazy" />
             </div>
             <div class="hobbieDetails">
               <h3 class="hobbieTitle">{{ hobbie.name }}</h3>

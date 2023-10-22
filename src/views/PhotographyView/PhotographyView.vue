@@ -28,7 +28,7 @@ export default {
         <div class="photosGrid">
           <div v-for="(photo, index) in photos" :key="index" class="photo">
             <div class="photoImage">
-              <img :src="photo" alt="photo" />
+              <img :src="photo" alt="photo" loading="lazy" />
             </div>
           </div>
         </div>

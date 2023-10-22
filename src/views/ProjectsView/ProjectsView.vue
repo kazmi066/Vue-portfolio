@@ -45,7 +45,7 @@ export default {
         <div class="projectsGrid">
           <div v-for="project in projects" :key="project.id" class="project">
             <div class="projectImage">
-              <img :src="project.picture" alt="Project" />
+              <img :src="project.picture" alt="Project" loading="lazy" />
             </div>
             <div class="projectDetails">
               <div class="projectHeader">
