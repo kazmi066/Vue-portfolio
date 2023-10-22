@@ -1,6 +1,6 @@
 <script>
 import ContainerLayout from '@/components/ContainerLayout.vue';
-import CtaSection from '@/components/CtaSection.vue';
+import CtaSection from './components/CtaSection.vue';
 import SectionTitle from '@/components/SectionTitle.vue';
 
 const projects = [

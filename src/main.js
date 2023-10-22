@@ -5,6 +5,10 @@ import './css/global.css'
 
 const router = createRouter({
   history: createWebHistory(),
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0, behavior: 'smooth' }
+  },
   routes: [
     {
       path: '/',
@@ -28,8 +32,13 @@ const router = createRouter({
     },
     {
       path: '/photography',
-      name: 'PhotographyView',
+      name: 'Photography',
       component: () => import('./views/PhotographyView/PhotographyView.vue')
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: () => import('./views/ContactView/ContactView.vue')
     },
   ]
 })

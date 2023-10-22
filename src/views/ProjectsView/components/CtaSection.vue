@@ -1,8 +1,9 @@
 <script>
 import ContainerLayout from '@/components/ContainerLayout.vue';
 import ButtonLayout from '@/components/ButtonLayout.vue';
+
 export default {
-    components: {ContainerLayout, ButtonLayout},
+    components: { ContainerLayout, ButtonLayout },
 }
 </script>
 
@@ -10,14 +11,14 @@ export default {
   <section class="ctaSection">
     <ContainerLayout>
       <div class="ctaContent">
-        <h2>Explore My Portfolio</h2>
+        <h2>Contact Me</h2>
         <p class="ctaSectionDescription">
-          Delve into a collection of my projects, where creativity meets functionality. Discover how I can add value to your initiatives by browsing through my work. Let's get started on your next project together!
+          I'd love to hear from you. Whether you have a question, want to collaborate, or just say hello, don't hesitate to reach out. Your message is important to me, and I'll get back to you as soon as possible.
         </p>
-        <router-link to="/projects">
+        <router-link to="/contact">
           <ButtonLayout :class="'ctaButton'">
             <div class="ctaButtonContent">
-              <p class="ctaButtonText">View My Portfolio</p>
+              <p class="ctaButtonText">Let's Talk</p>
               <img svg-inline src="@/assets/icons/rightArrowFilled.svg" alt="Right Arrow" />
             </div>
           </ButtonLayout>
