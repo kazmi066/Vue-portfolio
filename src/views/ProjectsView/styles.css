@@ -15,10 +15,6 @@
   max-width: 1200px;
 }
 
-.projectDetails {
-  padding: 0.4rem 0;
-}
-
 .projectImage img {
   width: 340px;
   object-fit: cover;

@@ -67,25 +67,28 @@ export default {
       </div>
     </div>
     <div class="skillsSection">
-      <SectionTitle>Skills</SectionTitle>
-      <h3 class="skillTitle">Languages I've worked with:</h3>
-      <ul>
-        <li>C++</li>
-        <li>Python</li>
-        <li>Javascript</li>
-      </ul>
-      <h3 class="skillTitle">Libraries/Frameworks I've worked with:</h3>
-      <ul>
-        <li>React.js</li>
-        <li>Vue.js</li>
-        <li>Node.js</li>
-      </ul>
-      <h3 class="skillTitle">Tools I am comfortable with:</h3>
-      <ul>
-        <li>VsCode</li>
-        <li>Sublime Text</li>
-        <li>Android Studio</li>
-      </ul>
+      <img src="@/assets/icons/dots.svg" alt="Dots" class="dots">
+      <div class="skillsSectionContent">
+        <SectionTitle>Skills</SectionTitle>
+        <h3 class="skillTitle">Languages I've worked with:</h3>
+        <ul>
+          <li>C++</li>
+          <li>Python</li>
+          <li>Javascript</li>
+        </ul>
+        <h3 class="skillTitle">Libraries/Frameworks I've worked with:</h3>
+        <ul>
+          <li>React.js</li>
+          <li>Vue.js</li>
+          <li>Node.js</li>
+        </ul>
+        <h3 class="skillTitle">Tools I am comfortable with:</h3>
+        <ul>
+          <li>VsCode</li>
+          <li>Sublime Text</li>
+          <li>Android Studio</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
