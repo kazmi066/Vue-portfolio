@@ -1,5 +1,5 @@
 ### Introduction
-Welcome to my Vue.js portfolio project! This project showcases my personal portfolio website, highlighting my skills, interests, and experiences.
+This is a Vue.js portfolio template project! This project showcases personal portfolio website, highlighting skills, interests, and experiences.
 
 ## Pages
 
@@ -12,7 +12,7 @@ Welcome to my Vue.js portfolio project! This project showcases my personal portf
 
 ## About
 
-This Vue.js project serves as my online portfolio, offering visitors an overview of my background, skills, and interests. It includes pages for my biography, interests, contact information, resume, photo gallery, and a showcase of skills I've learned.
+This Vue.js project serves as an online portfolio, offering visitors an overview of the background, skills, and interests. It includes pages for my biography, interests, contact information, resume, photo gallery, and a showcase of skills you've learned.
 
 ## Features
 
